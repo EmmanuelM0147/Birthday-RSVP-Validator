@@ -1,13 +1,16 @@
 document.getElementById('partyForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
+    event.preventDefault(); 
+    // Prevent form from submitting normally
   
     const name = document.getElementById('name').value.trim();
     const age = parseInt(document.getElementById('age').value, 10);
     const gender = document.getElementById('gender').value;
   
     const messageDiv = document.getElementById('message');
-    messageDiv.textContent = ''; // Clear previous messages
-    messageDiv.classList.remove('success', 'error'); // Reset message classes
+    messageDiv.textContent = ''; 
+    // Clear previous messages
+    messageDiv.classList.remove('success', 'error'); 
+    // Reset message classes
   
     if (age < 18) {
       messageDiv.classList.add('error');
